@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Te Joya Ideal</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@400;700&display=swap" rel="stylesheet"/>
+ </head>
+
+<body>
+   <!-- NAV -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="/logoprincipal.svg" alt="Logo Te Joya Ideal" />
+    </div>
+    
+    <nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/tujoyeria.html">Inicio</a></li>
+
+    <!-- Item con desplegable -->
+    <li class="dropdown">
+      <a>Anillos ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/anillos/anillos de oro.html">Anillos de oro</a></li>
+        <li><a href="/anillos/anillos de plata.html">Anillos de plata</a></li>
+        <li><a href="/anillos/anillos de compromiso.html">Compromiso</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown"><a>Pulseras ▾</a>
+    <ul class="dropdown-menu">
+      <li><a href="/pulseras /pulseras hombre.html">pulseras hombre</a></li>
+      <li><a href="/pulseras /pulseras mujeres.html">pulseras mujer</a></li>
+      <li><a href="/pulseras /pulseras para parejas.html">pulseras para parejas</a></li>
+    </ul></li>
+
+    <!-- Otro con submenú -->
+    <li class="dropdown">
+      <a>Collares ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/collares/collares oro.html">Oro</a></li>
+        <li><a href="/collares/collares plata.html">Plata</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown"<a>Relojes ▾</a>
+    <ul class="dropdown-menu">
+      <li><a href="/relojes/relojes hombre.html">relojes de hombres</a></li>
+      <li><a href="/relojes/relojes mujer.html">relojes de mujeres</a></li>
+    </ul>
+    </li>
+  </ul>
+
+  <div class="burger" id="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
+    <!-- Dentro del header -->
+<div class="search-icon">
+  <img src="/iconos/lupa.png" alt="Buscar" id="searchToggle"/>
+</div>
+
+<div class="search-bar" id="searchBar">
+  <input type="text" id="searchInput" placeholder="Buscar producto...">
+</div>
+  </header>
+
+"<!-- DESTACADO -->
+<section class="destacado">
+  <h2 id="destacado-title">rojes hombre</h2>
+
+  <!-- Mensajes dinámicos -->
+  <h2 id="result-title" style="display:none;">Productos encontrados</h2>
+  <h2 id="no-results" style="display:none;">No se encontraron resultados</h2>
+  
+  <div class="productos">
+      <div class="producto">
+       <img src="/imagenes-productos/anillo-de-corazones.jpg" alt="Anillo corazón"/ data-id="1" class="product"></a>
+        <p class="nombre-producto">Anillo de compromiso de corazón<br /></p>
+        <p class="precio">
+    <span class="precio-original">$22.900</span>
+    <span class="precio-descuento">$18.900</span>
+  </p>
+  <button data-id="1" class="product">Comprar</button>
+       </div>
+      <div class="producto">
+        <img src="/imagenes-productos/collares.webp" alt="Pulsera corazón" class="product" data-id="2">
+        <p class="nombre-producto">Pulsera de corazón de corazones<br /></p><strong>21.900$</strong>
+        <button data-id="2" class="product">Comprar</button>
+      </div>
+      
+      <div class="producto">
+        <img src="/imagenes-productos/reloj.webp" alt="Reloj hombre" data-id="3" class="product"/>
+        <p class="nombre-producto">Reloj para hombres elegancia azul<br /></p><strong>24.900$</strong>
+        <button data-id="3" class="product">Comprar</button>
+      </div>
+      
+      <div class="producto">
+        <img src="/imagenes-productos/anillo-de-diamante.jpg" alt="Collar con dije" class="product" data-id="4"/"">
+        <p class="nombre-producto">anillo de diamante<br/></p><strong>20.999$</strong>
+        <button data-id="4" class="product">Comprar</button>
+      </div>
+      
+      <div class="producto">
+        <img src="/imagenes-productos/collar.webp" alt="Collar cruz" class="product" data-id="5"/>
+        <p class="nombre-producto">Collar de cobre chapado en oro<br/></p><strong>40.999$</strong>
+        <button data-id="5" class="product">Comprar</button>
+      </div>
+      <div class="producto">
+        <img src="/imagenes-productos/anillo-de-hombre.webp" alt="Anillo hombre" / class="product" data-id="6">
+        <p class="nombre-producto">Anillo de cadena tricolor para hombres<br /></p><strong>30.999$</strong>
+        <button data-id="6" class="product">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  
+  
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-left">
+        <img id="modal-img" src="">
+      </div>
+     <div class="modal-right">
+  <h2 id="modal-name"></h2>
+  <p class="modal-price" id="modal-price"></p>
+  
+  <!-- Ficha técnica -->
+  <div class="ficha-tecnica">
+    <h3>Ficha Técnica</h3>
+    <ul>
+      <li><strong>Material:</strong> <span id="modal-material"></span></li>
+      <li><strong>Tamaño:</strong> <span id="modal-size"></span></li>
+      <li><strong>Peso:</strong> <span id="modal-weight"></span></li>
+      <li><strong>Disponibilidad:</strong> <span id="modal-stock"></span></li>
+    </ul>
+  </div>
+
+  <p class="modal-description" id="modal-description"></p>
+  <a id="modal-whatsapp" target="_blank" class="btn-whatsapp">Comprar por WhatsApp</a>
+</div>
+    </div>
+  </div>
+    <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="/logoprincipal.svg" alt="Tu Joya Ideal Logo">
+    </div>
+
+    <div class="footer-section">
+      <h3>Suscríbete</h3>
+      <p>Recibe novedades y promociones</p>
+      <form>
+        <input type="email" placeholder="Email">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="footer-section">
+     <h3>Nosotros</h3>
+       <a href="/politicas de envío.html"><p>Políticas de envío</p></a>
+      <a href="/contacto.html">Contacto</p></a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Síguenos</h3>
+      <p class="redes-sociales"><img src="/iconos/facebook.png" alt="Facebook"> Facebook</p>
+      <p class="redes-sociales"><img src="/iconos/instagram.png" alt="Instagram"> Instagram</p>
+      <p class="redes-sociales"><img src="/iconos/telegrama.png" alt="Telegram"> Telegram</p>
+    </div>
+  </div>
+</footer>
+  <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+      <!-- Script -->
+  <script>
+  const products = {
+    1: {
+      name: "Anillo de Compromiso de Corazón",
+      price: 22900,
+      discount: 18900,
+      description: "Un delicado anillo de compromiso con incrustación de zirconia en forma de corazón.",
+      img: "/imagenes-productos/anillo-de-corazones.jpg",
+      whatsapp: "https://wa.me/57XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20anillo%20de%20corazón",
+      material: "Plata 925",
+      size: "Talla 6, 7 y 8",
+      weight: "3g",
+      stock: "Disponible"
+    },
+    2: {
+      name: "Anillo de Plata Clásico",
+      price: 18500,
+      description: "Elegante anillo de plata 925, perfecto para uso diario y ocasiones especiales.",
+      img: "/imagenes-productos/collares.webp",
+      whatsapp: "https://wa.me/57XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20anillo%20de%20plata"
+    },
+    3: {
+      name: "Reloj para hombre",
+      price: 24900,
+      description: "Reloj para hombres elegancia azul.",
+      img: "/imagenes-productos/reloj.webp",
+      whatsapp: "https://wa.me/57XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20reloj"
+    },
+    4: {
+      name: "Anillo de diamante",
+      price: 20999,
+      description: "Un delicado anillo de compromiso con incrustación de zirconia en forma de diamante.",
+      img: "/imagenes-productos/anillo-de-diamante.jpg",
+      whatsapp: "https://wa.me/57XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20anillo%20de%20diamante"
+    },
+    5: {
+      name: "Collar cruz",
+      price: 40999,
+      description:"Collar de cobre chapado en oro.",
+      img: "/imagenes-productos/collar.webp",
+      whatsapp: "https://wa.me/57XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20collar"
+    },
+    6: {
+      name: "Anillo hombre tricolor",
+      price: 30999,
+      description:"Anillo de cadena tricolor para hombres.",
+      img: "/imagenes-productos/anillo-de-hombre.webp",
+      whatsapp: "https://wa.me/57XXXXXXXXXX?text=Estoy%20interesado%20en%20el%20anillo%20tricolor"
+    }
+  };
+    
+
+  const modal = document.getElementById("product-modal");
+  const closeModal = document.querySelector(".close");
+
+  document.querySelectorAll(".product").forEach(item => {
+    item.addEventListener("click", () => {
+      const id = item.getAttribute("data-id");
+      const p = products[id];
+      if (p) {
+        document.getElementById("modal-img").src = p.img;
+        document.getElementById("modal-name").textContent = p.name;
+
+        // ✅ Mostrar precio con descuento
+        if (p.discount) {
+          document.getElementById("modal-price").innerHTML = `
+            <span class="precio-original">$${p.price.toLocaleString()}</span>
+            <span class="precio-descuento">$${p.discount.toLocaleString()}</span>
+          `;
+        } else {
+          document.getElementById("modal-price").innerHTML = `
+            <span class="precio-normal">$${p.price.toLocaleString()}</span>
+          `;
+        }
+
+        document.getElementById("modal-material").textContent = p.material || "N/A";
+        document.getElementById("modal-size").textContent = p.size || "N/A";
+        document.getElementById("modal-weight").textContent = p.weight || "N/A";
+        document.getElementById("modal-stock").textContent = p.stock || "Consultar disponibilidad";
+        document.getElementById("modal-description").textContent = p.description;
+        document.getElementById("modal-whatsapp").href = p.whatsapp;
+        
+        modal.style.display = "flex";
+      }
+    });
+  });
+
+  closeModal.onclick = () => { modal.style.display = "none"; };
+  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+</script>
+<script>
+  const searchToggle = document.getElementById("searchToggle");
+  const searchBar = document.getElementById("searchBar");
+  const searchInput = document.getElementById("searchInput");
+
+  const hero = document.getElementById("hero");
+  const frase = document.getElementById("frase");
+  const destacadoTitle = document.getElementById("destacado-title");
+
+  const resultTitle = document.getElementById("result-title");
+  const noResults = document.getElementById("no-results");
+
+  searchToggle.addEventListener("click", () => {
+    searchBar.style.display = searchBar.style.display === "block" ? "none" : "block";
+    searchInput.focus();
+  });
+
+  searchInput.addEventListener("keyup", () => {
+    const term = searchInput.value.toLowerCase().trim();
+    let found = false;
+
+    document.querySelectorAll(".producto").forEach(card => {
+      const name = card.textContent.toLowerCase();
+      if (term !== "" && name.includes(term)) {
+        card.style.display = "block";
+        found = true;
+      } else if (term === "") {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    if (term === "") {
+      hero.style.display = "block";
+      frase.style.display = "block";
+      destacadoTitle.style.display = "block";
+      resultTitle.style.display = "none";
+      noResults.style.display = "none";
+    } else if (found) {
+      hero.style.display = "none";
+      frase.style.display = "none";
+      destacadoTitle.style.display = "none";
+      resultTitle.style.display = "block";
+      noResults.style.display = "none";
+    } else {
+      hero.style.display = "none";
+      frase.style.display = "none";
+      destacadoTitle.style.display = "none";
+      resultTitle.style.display = "none";
+      noResults.style.display = "block";
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Contacto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background: #0077cc;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #005fa3;
+    }
+
+    @media (max-width: 600px) {
+      .contact-section {
+        margin: 20px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+      <img src="/logoprincipal.svg" alt="Logo Te Joya Ideal" />
+    </div>
+    
+    <nav>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/tujoyeria.html">Inicio</a></li>
+
+    <!-- Item con desplegable -->
+    <li class="dropdown">
+      <a>Anillos ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/anillos/anillos de oro.html">Anillos de oro</a></li>
+        <li><a href="/anillos/anillos de plata.html">Anillos de plata</a></li>
+        <li><a href="/anillos/anillos de compromiso.html">Compromiso</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown"><a>Pulseras ▾</a>
+    <ul class="dropdown-menu">
+      <li><a href="/pulseras /pulseras hombre.html">pulseras hombre</a></li>
+      <li><a href="/pulseras /pulseras mujeres.html">pulseras mujer</a></li>
+      <li><a href="/pulseras /pulseras para parejas.html">pulseras para parejas</a></li>
+    </ul></li>
+
+    <!-- Otro con submenú -->
+    <li class="dropdown">
+      <a>Collares ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="/collares/collares oro.html">Oro</a></li>
+        <li><a href="/collares/collares plata.html">Plata</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown"<a>Relojes ▾</a>
+    <ul class="dropdown-menu">
+      <li><a href="/relojes/relojes hombre.html">relojes de hombres</a></li>
+      <li><a href="/relojes/relojes mujer.html">relojes de mujeres</a></li>
+    </ul>
+    </li>
+  </ul>
+
+  <div class="burger" id="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
+    <div class="search-icon">
+      <img src="/iconos/lupa.png" alt="Buscar" />
+    </div>
+  </header>
+  <section class="contact-section">
+    <h2>Contáctanos</h2>
+    
+    <div class="contact-info">
+      <p>📧 Correo: contacto@tutienda.com</p>
+      <p>📞 Teléfono/WhatsApp: +57 300 000 0000</p>
+      <p>📍 Dirección: Calle 123 #45-67, Ciudad – País</p>
+      <p>🕒 Horario: Lunes a viernes 9am – 6pm | Sábados 9am – 1pm</p>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </section>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logoprincipal.svg" alt="Tu Joya Ideal Logo">
+    </div>
+
+    <div class="footer-section">
+      <h3>Suscríbete</h3>
+      <p>Recibe novedades y promociones</p>
+      <form>
+        <input type="email" placeholder="Email">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="footer-section">
+      <h3>Nosotros</h3>
+      <p>Políticas de envío</p>
+      <p>Contacto</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Síguenos</h3>
+      <p class="redes-sociales"><img src="/iconos/facebook.png" alt="Facebook"> Facebook</p>
+      <p class="redes-sociales"><img src="/iconos/instagram.png" alt="Instagram"> Instagram</p>
+      <p class="redes-sociales"><img src="/iconos/telegrama.png" alt="Telegram"> Telegram</p>
+    </div>
+  </div>
+</footer>
+ <script>
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
